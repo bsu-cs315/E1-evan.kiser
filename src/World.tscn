@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cybcwo0wdqasp"]
+[gd_scene load_steps=7 format=3 uid="uid://cybcwo0wdqasp"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_i2tr3"]
 [ext_resource type="PackedScene" uid="uid://cr8kdualqn08g" path="res://src/ball.tscn" id="1_yg3jb"]
 [ext_resource type="Texture2D" uid="uid://7nehh1t7jf5h" path="res://assets/elementStone011.png" id="2_vld5q"]
+[ext_resource type="PackedScene" uid="uid://bxksofx86bvrw" path="res://src/goal.tscn" id="3_fihi8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85y6r"]
 texture = ExtResource("2_vld5q")
@@ -36,6 +37,9 @@ script = ExtResource("1_i2tr3")
 
 [node name="Ball" parent="." instance=ExtResource("1_yg3jb")]
 position = Vector2(-24, 313)
+
+[node name="Goal" parent="." instance=ExtResource("3_fihi8")]
+position = Vector2(568, 85)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_wdj6a")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxksofx86bvrw"]
+
+[ext_resource type="Texture2D" uid="uid://ce68jidv1yeb6" path="res://assets/flagGreen.png" id="1_8leh5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qf7dr"]
+radius = 41.0
+height = 82.0
+
+[node name="Goal" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, 2)
+shape = SubResource("CapsuleShape2D_qf7dr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, 3)
+texture = ExtResource("1_8leh5")
