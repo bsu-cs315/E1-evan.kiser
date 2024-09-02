@@ -44,8 +44,15 @@ format = 2
 layer_0/tile_data = PackedInt32Array(393214, 3, 0, 393215, 3, 0, 327680, 3, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327693, 3, 0, 262157, 3, 0, 196621, 3, 0, 131085, 3, 0, 65549, 3, 0, 13, 3, 0, 327678, 3, 0, 262142, 3, 0, 196606, 3, 0, 131070, 3, 0, 65534, 3, 0)
 
 [node name="PowerLabel" type="Label" parent="."]
-offset_left = -57.0
-offset_top = -149.0
-offset_right = 74.0
-offset_bottom = -102.0
+offset_left = -68.0
+offset_top = -124.0
+offset_right = 63.0
+offset_bottom = -77.0
 text = "POWER"
+
+[node name="AngleLabel" type="Label" parent="."]
+offset_left = -65.0
+offset_top = -103.0
+offset_right = 38.0
+offset_bottom = -80.0
+text = "ANGLE"
