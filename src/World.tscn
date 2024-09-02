@@ -60,3 +60,9 @@ offset_top = -103.0
 offset_right = 38.0
 offset_bottom = -80.0
 text = "ANGLE"
+
+[node name="WinLabel" type="Label" parent="."]
+offset_left = 450.0
+offset_top = -61.0
+offset_right = 559.0
+offset_bottom = -8.0

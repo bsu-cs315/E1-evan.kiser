@@ -5,3 +5,5 @@ extends Node2D
 func _process(delta: float) -> void:
 	$PowerLabel.text = ("POWER: %.d" % $Ball.power)
 	$AngleLabel.text = ("ANGLE: %.d" % rad_to_deg(-1*$Ball.angle))
+	if ($Goal.winDetector):
+		$WinLabel.text = ("You hit the Flag!")
