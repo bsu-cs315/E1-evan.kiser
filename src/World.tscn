@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cybcwo0wdqasp"]
+[gd_scene load_steps=6 format=3 uid="uid://cybcwo0wdqasp"]
 
+[ext_resource type="Script" path="res://src/world.gd" id="1_i2tr3"]
 [ext_resource type="PackedScene" uid="uid://cr8kdualqn08g" path="res://src/ball.tscn" id="1_yg3jb"]
 [ext_resource type="Texture2D" uid="uid://7nehh1t7jf5h" path="res://assets/elementStone011.png" id="2_vld5q"]
 
@@ -31,11 +32,20 @@ sources/3 = SubResource("TileSetAtlasSource_85y6r")
 
 [node name="World" type="Node2D"]
 position = Vector2(151, 196)
+script = ExtResource("1_i2tr3")
 
 [node name="Ball" parent="." instance=ExtResource("1_yg3jb")]
+position = Vector2(-24, 313)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_wdj6a")
 rendering_quadrant_size = 70
 format = 2
 layer_0/tile_data = PackedInt32Array(393214, 3, 0, 393215, 3, 0, 327680, 3, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327693, 3, 0, 262157, 3, 0, 196621, 3, 0, 131085, 3, 0, 65549, 3, 0, 13, 3, 0, 327678, 3, 0, 262142, 3, 0, 196606, 3, 0, 131070, 3, 0, 65534, 3, 0)
+
+[node name="PowerLabel" type="Label" parent="."]
+offset_left = -57.0
+offset_top = -149.0
+offset_right = 74.0
+offset_bottom = -102.0
+text = "POWER"
