@@ -2,12 +2,13 @@
 > CS 315 - Game Programming - 2D Physics-Based Gameplay
 
 ### Description
-This is a game where the players goal is to launch a ball at a flag.
+This is a game where the player's goal is to launch a ball at a flag.
   #### Controls
   - W / Up Arrow Key decreases the angle at which the ball is launched
   - S / Down Arrow Key increases the angle at which the ball is launched
   - A / Left Arrow  Key decreases the power at which the ball is launched
   - D / Right Arrow  Key increases the power at which the ball is launched
+  - Space will launch the Ball
 A message will display when you hit the flag with the ball
 
 
