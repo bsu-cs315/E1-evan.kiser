@@ -13,7 +13,7 @@ A message will display when you hit the flag with the ball
 
 
 ### Installation
-1. Clone the [Github Repository](https://github.com/bsu-cs315/E1.1-Evan-Kiser))
+1. Clone the [Github Repository](https://github.com/bsu-cs315/E1.1-Evan-Kiser)
 2. Install [Godot Engine](https://godotengine.org/)
 3. Run the Repository in Godot
 
