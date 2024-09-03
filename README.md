@@ -26,5 +26,5 @@ I used assets from [Kenney's Physic Assets](https://www.kenney.nl/assets/physics
 - Controls: The controls for the game are listed
 - Licenses: The license is provided above
 - Version Control Management: I used GitBash and Git for my version control, created a Repository, added a README file, and released a Release in Github.
-- Release Management: I have released a release of the project on Github
+- Release Management: I have released a release of the project on GitHub
 - Report: All of the essential and auxiliary goals are met.
