@@ -1,4 +1,4 @@
-## Exercise 1.1 - 2D Physics-Based Gameplay
+## Exercise 1 - 2D Physics-Based Gameplay
 > CS 315 - Game Programming - 2D Physics-Based Gameplay
 
 ### Description
@@ -18,7 +18,7 @@ A message will display when you hit the flag with the ball
 3. Run the Repository in Godot
 
 ### Licenses
-I used assets from [Kenney's Physic Assets](https://www.kenney.nl/assets/physics-assets)
+I used assets from [Kenney's Physic Assets](https://www.kenney.nl/assets/physics-assets) licensed under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ### Contributors
 - [Evan Kiser](https://github.com/evankiser01)
@@ -27,5 +27,5 @@ I used assets from [Kenney's Physic Assets](https://www.kenney.nl/assets/physics
 - Controls: The controls for the game are listed
 - Licenses: The license is provided above
 - Version Control Management: I used GitBash and Git for my version control, created a Repository, added a README file, and released a Release in Github.
-- Release Management: I have released a release of the project on GitHub
-- Report: All of the essential and auxiliary goals are met.
+- Release Management: I have released a release of the project on GitHub using semantic versioning.
+- Report: I completed all of the essential and auxiliary goals.
