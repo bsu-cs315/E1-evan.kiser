@@ -1,5 +1,5 @@
 ## Exercise 1 - 2D Physics-Based Gameplay
-> CS 315 - Game Programming - 2D Physics-Based Gameplay
+- CS 315 - Game Programming - 2D Physics-Based Gameplay
 
 ### Description
 This is a game where the player's goal is to launch a ball at a flag.
