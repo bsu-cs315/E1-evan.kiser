@@ -16,5 +16,5 @@ func _on_cannon_angle_changed() -> void:
 	$AngleLabel.modulate = Color.RED
 	
 func _on_cannon_projectile_amount_changed() -> void:
-	$ProjectilesLeftLabel.text = ("Projectiles Left : %.d" % $Cannon.projectiles_left)
+	$ProjectilesLeftLabel.text = ("Projectiles Left : %.d" % $Cannon.balls_left)
 	$ProjectilesLeftLabel.modulate = Color.RED

@@ -12,9 +12,10 @@ var max_power := 2000
 @export var angle := (-TAU/4)
 @export var angle_change_rate := (TAU/8)
 
-# will be used to determine whether the ball is alive and moving or not
-@export var ball_exist := false
-@export var projectiles_left := 3
+@export var can_shoot := true
+@export var balls_left := 3
+var current_ball : RigidBody2D = null
+
 
 func _ready() -> void:
 	_update_power_label()
@@ -32,16 +33,15 @@ func _process(delta: float) -> void:
 		angle = clampf(angle, deg_to_rad(-180), deg_to_rad(0))
 		angle_changed.emit()
 		
-	if(!ball_exist):
-		if Input.is_action_just_pressed("launch") and (projectiles_left > 0):
+	if Input.is_action_just_pressed("launch")and (balls_left > 0):
+		if current_ball == null or current_ball.is_sleeping():
 			var impulse := Vector2(1,0) * power
-			var ball : RigidBody2D = preload("res://src/ball.tscn").instantiate()
-			get_parent().add_child(ball)
-			ball.global_position = global_position
-			ball.apply_impulse(impulse.rotated(angle))
+			current_ball = preload("res://src/ball.tscn").instantiate() as RigidBody2D
+			get_parent().add_child(current_ball)
+			current_ball.global_position = global_position
+			current_ball.apply_impulse(impulse.rotated(angle))
 			$CannonShotSound.playing = true
-			ball_exist = true
-			projectiles_left -= 1
+			balls_left -= 1
 			projectile_amount_changed.emit()
 			
 func _update_power_label() -> void:
