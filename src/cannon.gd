@@ -39,6 +39,7 @@ func _process(delta: float) -> void:
 			get_parent().add_child(ball)
 			ball.global_position = global_position
 			ball.apply_impulse(impulse.rotated(angle))
+			$CannonShotSound.playing = true
 			ball_exist = true
 			projectiles_left -= 1
 			projectile_amount_changed.emit()
