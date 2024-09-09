@@ -32,6 +32,7 @@ func _process(delta: float) -> void:
 		angle += angle_axis * angle_change_rate * delta
 		angle = clampf(angle, deg_to_rad(-180), deg_to_rad(0))
 		angle_changed.emit()
+
 		
 	if Input.is_action_just_pressed("launch")and (balls_left > 0):
 		if current_ball == null or current_ball.is_sleeping():
@@ -46,7 +47,3 @@ func _process(delta: float) -> void:
 			
 func _update_power_label() -> void:
 	get_parent().get_node("PowerLabel").text = ("Power : %.d" % power)
-
-func _draw() -> void:
-	draw_circle(Vector2.ZERO, 40, Color.BLACK)
-	draw_line(Vector2.ZERO, Vector2(80, 0).rotated(-TAU/8), Color.BLACK, 5)
