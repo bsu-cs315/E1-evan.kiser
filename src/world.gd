@@ -1,9 +1,15 @@
 extends Node2D
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	$PowerLabel.text = ("POWER: %.d" % $Ball.power)
-	$AngleLabel.text = ("ANGLE: %.d" % rad_to_deg(-1*$Ball.angle))
+	$PowerLabel.modulate = Color.BLACK
+	$AngleLabel.modulate = Color.BLACK
 	if ($Goal.winDetector):
 		$WinLabel.text = ("You hit the Flag!")
+
+func _on_cannon_power_changed() -> void:
+	$PowerLabel.text = ("Power : %.d" % $Cannon.power)
+	$PowerLabel.modulate = Color.RED
+
+func _on_cannon_angle_changed() -> void:
+	$AngleLabel.text = ("Angle : %.d" % rad_to_deg(-1*$Cannon.angle))
+	$AngleLabel.modulate = Color.RED
