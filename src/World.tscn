@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cybcwo0wdqasp"]
+[gd_scene load_steps=13 format=4 uid="uid://cybcwo0wdqasp"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_77ghd"]
 [ext_resource type="Texture2D" uid="uid://3svb2jem18m2" path="res://assets/blue_shroom.png" id="2_67mdm"]
@@ -30,6 +30,10 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_e5dkc"]
 font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xhups"]
+font_size = 30
 font_color = Color(0, 0, 0, 1)
 
 [node name="World" type="Node2D"]
@@ -76,5 +80,14 @@ offset_right = 559.0
 offset_bottom = -8.0
 label_settings = SubResource("LabelSettings_e5dkc")
 
+[node name="ProjectilesLeftLabel" type="Label" parent="."]
+offset_left = 694.0
+offset_top = -124.0
+offset_right = 950.0
+offset_bottom = -53.0
+text = "Projectiles Left : 3"
+label_settings = SubResource("LabelSettings_xhups")
+
 [connection signal="angle_changed" from="Cannon" to="." method="_on_cannon_angle_changed"]
 [connection signal="power_changed" from="Cannon" to="." method="_on_cannon_power_changed"]
+[connection signal="projectile_amount_changed" from="Cannon" to="." method="_on_cannon_projectile_amount_changed"]
