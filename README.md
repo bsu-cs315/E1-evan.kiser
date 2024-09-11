@@ -11,19 +11,10 @@ This is a game where the player's goal is to launch a ball at a flag.
   - Space will launch the Ball
   - A message will display when you hit the flag with the ball
 
-
-### Installation
-1. Clone the [Github Repository](https://github.com/bsu-cs315/E1.1-Evan-Kiser)
-2. Install [Godot Engine](https://godotengine.org/)
-3. Run the Repository in Godot
-
 ### Licenses
 - I used assets from [Kenney's Physic Assets](https://www.kenney.nl/assets/physics-assets) licensed under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 - I used assets from [Kenney's Top-Down Tanks Assets](https://www.kenney.nl/assets/top-down-tanks) licensed under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
-- I generated sound effects from [ChipTone by SFBGames](https://sfbgames.itch.io/chiptone) licensed under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
-
-### Contributors
-- [Evan Kiser](https://github.com/evankiser01)
+- I generated the sound effects used in the game
 
 ### Activity Report
 - Controls: The controls for the game are listed
