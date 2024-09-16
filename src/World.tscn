@@ -89,5 +89,6 @@ text = "Projectiles Left : 3"
 label_settings = SubResource("LabelSettings_xhups")
 
 [connection signal="angle_changed" from="Cannon" to="." method="_on_cannon_angle_changed"]
+[connection signal="no_remaining_projectiles" from="Cannon" to="." method="_on_cannon_no_remaining_projectiles"]
 [connection signal="power_changed" from="Cannon" to="." method="_on_cannon_power_changed"]
 [connection signal="projectile_amount_changed" from="Cannon" to="." method="_on_cannon_projectile_amount_changed"]

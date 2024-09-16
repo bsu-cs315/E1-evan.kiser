@@ -3,6 +3,7 @@ extends Node2D
 signal power_changed
 signal angle_changed
 signal projectile_amount_changed
+signal no_remaining_projectiles
 
 @export var power := 800.0
 @export var power_change_rate := 200.0
@@ -20,6 +21,7 @@ var current_ball : RigidBody2D = null
 func _ready() -> void:
 	_update_power_label()
 
+
 func _process(delta: float) -> void:
 	var power_axis := Input.get_axis("decrease_power", "increase_power")
 	if power_axis != 0:
@@ -33,8 +35,8 @@ func _process(delta: float) -> void:
 		angle = clampf(angle, deg_to_rad(-180), deg_to_rad(0))
 		angle_changed.emit()
 
-		
-	if Input.is_action_just_pressed("launch")and (balls_left > 0):
+
+	if Input.is_action_just_pressed("launch") and (balls_left > 0):
 		if current_ball == null or current_ball.is_sleeping():
 			var impulse := Vector2(1,0) * power
 			current_ball = preload("res://src/ball.tscn").instantiate() as RigidBody2D
@@ -43,7 +45,10 @@ func _process(delta: float) -> void:
 			current_ball.apply_impulse(impulse.rotated(angle))
 			$CannonShotSound.playing = true
 			balls_left -= 1
+			if balls_left == 0:
+				no_remaining_projectiles.emit()
 			projectile_amount_changed.emit()
-			
+
+
 func _update_power_label() -> void:
 	get_parent().get_node("PowerLabel").text = ("Power : %.d" % power)
