@@ -1,11 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnib3cmklyux5"]
+[gd_scene load_steps=8 format=3 uid="uid://bnib3cmklyux5"]
 
 [ext_resource type="Script" path="res://src/title_screen.gd" id="1_lolpl"]
 [ext_resource type="Texture2D" uid="uid://cmb0cq81vb2ts" path="res://assets/blue_land.png" id="1_vwxw0"]
+[ext_resource type="Texture2D" uid="uid://b4e7bg1w6gd60" path="res://assets/alienBeige_round.png" id="3_doeuy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g7x6v"]
 font_size = 64
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_f7cyg"]
+resource_name = "logo_animation"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ball Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 2, 4, 6, 7.96667),
+"transitions": PackedFloat32Array(1.93187, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-56, 58), Vector2(56, 58), Vector2(1092, 47), Vector2(1096, 585), Vector2(50, 591), Vector2(56, 58)]
+}
+
+[sub_resource type="Animation" id="Animation_dgl28"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ball Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-56, 58)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_na0js"]
+_data = {
+"RESET": SubResource("Animation_dgl28"),
+"logo_animation": SubResource("Animation_f7cyg")
+}
 
 [node name="Title_Screen" type="Control"]
 layout_mode = 3
@@ -23,6 +61,10 @@ offset_top = -210.0
 offset_right = 1251.0
 offset_bottom = 814.0
 texture = ExtResource("1_vwxw0")
+
+[node name="Ball Sprite" type="Sprite2D" parent="."]
+position = Vector2(-56, 58)
+texture = ExtResource("3_doeuy")
 
 [node name="Top_VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -64,5 +106,11 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 text = "PLAY !"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_na0js")
+}
+movie_quit_on_finish = true
 
 [connection signal="pressed" from="Bottom_VBoxContainer/Play Button" to="." method="_on_button_pressed"]
