@@ -15,7 +15,7 @@ const _MAX_ANGLE :=deg_to_rad(0)
 @export var angle := -TAU/4
 @export var angle_change_rate := TAU/8
 @export var can_shoot := true
-@export var _balls_left := 3
+@export var balls_left := 3
 var _current_ball : RigidBody2D = null
 
 
@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 		angle = clampf(angle, _MIN_ANGLE, _MAX_ANGLE)
 		angle_changed.emit()
 
-	if Input.is_action_just_pressed("launch") and _balls_left > 0:
+	if Input.is_action_just_pressed("launch") and balls_left > 0:
 		if _current_ball == null or _current_ball.is_sleeping():
 			var impulse := Vector2(1,0) * power
 			_current_ball = preload("res://src/ball.tscn").instantiate() as RigidBody2D
@@ -44,8 +44,8 @@ func _process(delta: float) -> void:
 			_current_ball.global_position = global_position
 			_current_ball.apply_impulse(impulse.rotated(angle))
 			$CannonShotSound.playing = true
-			_balls_left -= 1
-			if _balls_left == 0:
+			balls_left -= 1
+			if balls_left == 0:
 				no_remaining_projectiles.emit()
 			projectile_amount_changed.emit()
 
