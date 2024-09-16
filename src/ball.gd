@@ -1,9 +1,9 @@
 extends RigidBody2D
 
-var screen_bottom_limit: float
+var _screen_bottom_limit: float
 
 func _ready() -> void:
-	screen_bottom_limit = get_viewport_rect().size.y
+	_screen_bottom_limit = get_viewport_rect().size.y
 
 
 func _on_sleeping_state_changed() -> void:
@@ -11,5 +11,5 @@ func _on_sleeping_state_changed() -> void:
 
 
 func _process(_delta):
-	if position.y > screen_bottom_limit:
+	if position.y > _screen_bottom_limit:
 		queue_free()
