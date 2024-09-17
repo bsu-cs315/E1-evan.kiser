@@ -7,7 +7,7 @@ signal no_remaining_projectiles
 
 const _MIN_POWER := 0
 const _MAX_POWER := 2000
-const _MIN_ANGLE := deg_to_rad(180)
+const _MIN_ANGLE := deg_to_rad(-180)
 const _MAX_ANGLE :=deg_to_rad(0)
 
 @export var power := 800.
