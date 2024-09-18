@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=4 uid="uid://cybcwo0wdqasp"]
+[gd_scene load_steps=13 format=4 uid="uid://cybcwo0wdqasp"]
 
+[ext_resource type="Script" path="res://world/world.gd" id="1_yfays"]
 [ext_resource type="Texture2D" uid="uid://3svb2jem18m2" path="res://world/blue_shroom.png" id="2_ksrag"]
 [ext_resource type="Texture2D" uid="uid://7nehh1t7jf5h" path="res://world/elementStone011.png" id="3_p74tc"]
 [ext_resource type="PackedScene" uid="uid://dkt6ehfgte3ev" path="res://cannon/cannon.tscn" id="4_pgiir"]
@@ -37,6 +38,7 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="World" type="Node2D"]
 position = Vector2(151, 196)
+script = ExtResource("1_yfays")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -180.0
@@ -85,3 +87,8 @@ offset_right = 950.0
 offset_bottom = -53.0
 text = "Projectiles Left : 3"
 label_settings = SubResource("LabelSettings_xhups")
+
+[connection signal="angle_changed" from="Cannon" to="." method="_on_cannon_angle_changed"]
+[connection signal="no_remaining_projectiles" from="Cannon" to="." method="_on_cannon_no_remaining_projectiles"]
+[connection signal="power_changed" from="Cannon" to="." method="_on_cannon_power_changed"]
+[connection signal="projectile_amount_changed" from="Cannon" to="." method="_on_cannon_projectile_amount_changed"]

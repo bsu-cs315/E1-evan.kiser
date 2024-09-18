@@ -7,7 +7,7 @@ func _process(_delta: float) -> void:
 	
 	if $Goal.winDetector:
 		$WinLabel.text = "You hit the Flag!"
-		await(get_tree().create_timer(8).timeout)
+		await(get_tree().create_timer(5).timeout)
 		get_tree().change_scene_to_file("res://title_screen/title_screen.tscn")
 
 
@@ -27,8 +27,8 @@ func _on_cannon_projectile_amount_changed() -> void:
 
 
 func _on_cannon_no_remaining_projectiles() -> void:
-	await(get_tree().create_timer(8).timeout)
+	await(get_tree().create_timer(5).timeout)
 	if not $Goal.winDetector:
 		$WinLabel.text = "You lost!"
-		await(get_tree().create_timer(8).timeout)
+		await(get_tree().create_timer(5).timeout)
 		get_tree().change_scene_to_file("res://title_screen/title_screen.tscn")
