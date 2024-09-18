@@ -6,4 +6,5 @@ func _process(_delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://project/world/world.tscn")
+	get_tree().change_scene_to_file("res://world/world.tscn")
+	

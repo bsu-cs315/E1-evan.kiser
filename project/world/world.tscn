@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://cybcwo0wdqasp"]
+[gd_scene load_steps=12 format=4 uid="uid://cybcwo0wdqasp"]
 
-[ext_resource type="Script" path="res://project/world/world.gd" id="1_fuga5"]
-[ext_resource type="Texture2D" uid="uid://3svb2jem18m2" path="res://project/world/blue_shroom.png" id="2_ksrag"]
-[ext_resource type="Texture2D" uid="uid://7nehh1t7jf5h" path="res://project/world/elementStone011.png" id="3_p74tc"]
-[ext_resource type="PackedScene" uid="uid://dkt6ehfgte3ev" path="res://project/cannon/cannon.tscn" id="4_pgiir"]
-[ext_resource type="PackedScene" uid="uid://bxksofx86bvrw" path="res://project/goal/goal.tscn" id="5_1cm2v"]
+[ext_resource type="Texture2D" uid="uid://3svb2jem18m2" path="res://world/blue_shroom.png" id="2_ksrag"]
+[ext_resource type="Texture2D" uid="uid://7nehh1t7jf5h" path="res://world/elementStone011.png" id="3_p74tc"]
+[ext_resource type="PackedScene" uid="uid://dkt6ehfgte3ev" path="res://cannon/cannon.tscn" id="4_pgiir"]
+[ext_resource type="PackedScene" uid="uid://bxksofx86bvrw" path="res://goal/goal.tscn" id="5_1cm2v"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cas4s"]
 
@@ -38,7 +37,6 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="World" type="Node2D"]
 position = Vector2(151, 196)
-script = ExtResource("1_fuga5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -180.0
@@ -87,8 +85,3 @@ offset_right = 950.0
 offset_bottom = -53.0
 text = "Projectiles Left : 3"
 label_settings = SubResource("LabelSettings_xhups")
-
-[connection signal="angle_changed" from="Cannon" to="." method="_on_cannon_angle_changed"]
-[connection signal="no_remaining_projectiles" from="Cannon" to="." method="_on_cannon_no_remaining_projectiles"]
-[connection signal="power_changed" from="Cannon" to="." method="_on_cannon_power_changed"]
-[connection signal="projectile_amount_changed" from="Cannon" to="." method="_on_cannon_projectile_amount_changed"]

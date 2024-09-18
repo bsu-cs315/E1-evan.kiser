@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d31ap2lu7ghol"
-path="res://.godot/imported/cannon_shot.wav-9596adb3a4710d514828c2204df49d8e.sample"
+path="res://.godot/imported/cannon_shot.wav-1c60953647888a7a80206c169d45b7fc.sample"
 
 [deps]
 
-source_file="res://project/cannon/cannon_shot.wav"
-dest_files=["res://.godot/imported/cannon_shot.wav-9596adb3a4710d514828c2204df49d8e.sample"]
+source_file="res://cannon/cannon_shot.wav"
+dest_files=["res://.godot/imported/cannon_shot.wav-1c60953647888a7a80206c169d45b7fc.sample"]
 
 [params]
 

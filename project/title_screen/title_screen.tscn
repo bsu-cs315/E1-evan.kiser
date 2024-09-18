@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnib3cmklyux5"]
+[gd_scene load_steps=7 format=3 uid="uid://bnib3cmklyux5"]
 
-[ext_resource type="Script" path="res://project/title_screen/title_screen.gd" id="1_lolpl"]
-[ext_resource type="Texture2D" uid="uid://cmb0cq81vb2ts" path="res://project/title_screen/blue_land.png" id="1_vwxw0"]
-[ext_resource type="Texture2D" uid="uid://b4e7bg1w6gd60" path="res://project/ball/alienBeige_round.png" id="3_doeuy"]
+[ext_resource type="Texture2D" uid="uid://cmb0cq81vb2ts" path="res://title_screen/blue_land.png" id="1_vwxw0"]
+[ext_resource type="Texture2D" uid="uid://b4e7bg1w6gd60" path="res://ball/alienBeige_round.png" id="3_doeuy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g7x6v"]
 font_size = 64
@@ -52,7 +51,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_lolpl")
 
 [node name="Title_Background" type="TextureRect" parent="."]
 layout_mode = 0
