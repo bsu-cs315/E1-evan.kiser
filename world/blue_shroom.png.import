@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddr3ybht6yb7b"
-path="res://.godot/imported/barrelGreen.png-c2012f33945b7f293d7d5d330a346572.ctex"
+uid="uid://3svb2jem18m2"
+path="res://.godot/imported/blue_shroom.png-8eeab58881880fc195048599a605b33a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/barrelGreen.png"
-dest_files=["res://.godot/imported/barrelGreen.png-c2012f33945b7f293d7d5d330a346572.ctex"]
+source_file="res://world/blue_shroom.png"
+dest_files=["res://.godot/imported/blue_shroom.png-8eeab58881880fc195048599a605b33a.ctex"]
 
 [params]
 

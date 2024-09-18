@@ -1,15 +1,15 @@
 [gd_scene load_steps=13 format=4 uid="uid://cybcwo0wdqasp"]
 
-[ext_resource type="Script" path="res://src/world.gd" id="1_77ghd"]
-[ext_resource type="Texture2D" uid="uid://3svb2jem18m2" path="res://assets/blue_shroom.png" id="2_67mdm"]
-[ext_resource type="Texture2D" uid="uid://7nehh1t7jf5h" path="res://assets/elementStone011.png" id="3_v2ioc"]
-[ext_resource type="PackedScene" uid="uid://dkt6ehfgte3ev" path="res://src/cannon.tscn" id="4_od1pg"]
-[ext_resource type="PackedScene" uid="uid://bxksofx86bvrw" path="res://src/goal.tscn" id="6_64d8x"]
+[ext_resource type="Script" path="res://world/world.gd" id="1_fuga5"]
+[ext_resource type="Texture2D" uid="uid://3svb2jem18m2" path="res://world/blue_shroom.png" id="2_ksrag"]
+[ext_resource type="Texture2D" uid="uid://7nehh1t7jf5h" path="res://world/elementStone011.png" id="3_p74tc"]
+[ext_resource type="PackedScene" uid="uid://dkt6ehfgte3ev" path="res://cannon/cannon.tscn" id="4_pgiir"]
+[ext_resource type="PackedScene" uid="uid://bxksofx86bvrw" path="res://goal/goal.tscn" id="5_1cm2v"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cas4s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_26uk7"]
-texture = ExtResource("3_v2ioc")
+texture = ExtResource("3_p74tc")
 texture_region_size = Vector2i(70, 70)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
@@ -38,23 +38,23 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="World" type="Node2D"]
 position = Vector2(151, 196)
-script = ExtResource("1_77ghd")
+script = ExtResource("1_fuga5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -180.0
 offset_top = -411.0
 offset_right = 1018.0
 offset_bottom = 613.0
-texture = ExtResource("2_67mdm")
+texture = ExtResource("2_ksrag")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD+/wUAAAAAAAAAAAD//wUAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAALAAUAAAAAAAAAAAAMAAUAAAAAAAAAAAANAAUAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_j81qg")
 
-[node name="Cannon" parent="." instance=ExtResource("4_od1pg")]
+[node name="Cannon" parent="." instance=ExtResource("4_pgiir")]
 position = Vector2(-34, 314)
 
-[node name="Goal" parent="." instance=ExtResource("6_64d8x")]
+[node name="Goal" parent="." instance=ExtResource("5_1cm2v")]
 position = Vector2(568, 85)
 
 [node name="PowerLabel" type="Label" parent="."]

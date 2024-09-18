@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("launch") and balls_left > 0:
 		if _current_ball == null or _current_ball.is_sleeping():
 			var impulse := Vector2(1,0) * power
-			_current_ball = preload("res://src/ball.tscn").instantiate() as RigidBody2D
+			_current_ball = preload("res://ball/ball.tscn").instantiate() as RigidBody2D
 			get_parent().add_child(_current_ball)
 			_current_ball.global_position = global_position
 			_current_ball.apply_impulse(impulse.rotated(angle))
