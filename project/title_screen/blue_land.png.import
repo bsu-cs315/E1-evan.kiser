@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3svb2jem18m2"
-path="res://.godot/imported/blue_shroom.png-8eeab58881880fc195048599a605b33a.ctex"
+uid="uid://cmb0cq81vb2ts"
+path="res://.godot/imported/blue_land.png-b5e644231b61ac131dda364ae5840a13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/blue_shroom.png"
-dest_files=["res://.godot/imported/blue_shroom.png-8eeab58881880fc195048599a605b33a.ctex"]
+source_file="res://project/title_screen/blue_land.png"
+dest_files=["res://.godot/imported/blue_land.png-b5e644231b61ac131dda364ae5840a13.ctex"]
 
 [params]
 

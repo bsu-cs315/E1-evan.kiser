@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmb0cq81vb2ts"
-path="res://.godot/imported/blue_land.png-a75926ba67ffb27ed83cb199fc11b375.ctex"
+uid="uid://7nehh1t7jf5h"
+path="res://.godot/imported/elementStone011.png-55c216107b4d2a1e6c9694b8c7d7d47d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://title_screen/blue_land.png"
-dest_files=["res://.godot/imported/blue_land.png-a75926ba67ffb27ed83cb199fc11b375.ctex"]
+source_file="res://project/world/elementStone011.png"
+dest_files=["res://.godot/imported/elementStone011.png-55c216107b4d2a1e6c9694b8c7d7d47d.ctex"]
 
 [params]
 

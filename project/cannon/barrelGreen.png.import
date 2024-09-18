@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4e7bg1w6gd60"
-path="res://.godot/imported/alienBeige_round.png-2f0d04e94e5e51721b5482ed2decd15d.ctex"
+uid="uid://ddr3ybht6yb7b"
+path="res://.godot/imported/barrelGreen.png-6b4dcc0313547bff603ca52fe0877906.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ball/alienBeige_round.png"
-dest_files=["res://.godot/imported/alienBeige_round.png-2f0d04e94e5e51721b5482ed2decd15d.ctex"]
+source_file="res://project/cannon/barrelGreen.png"
+dest_files=["res://.godot/imported/barrelGreen.png-6b4dcc0313547bff603ca52fe0877906.ctex"]
 
 [params]
 

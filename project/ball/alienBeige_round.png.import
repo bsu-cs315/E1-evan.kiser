@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7nehh1t7jf5h"
-path="res://.godot/imported/elementStone011.png-fd14b0a5ce45f6120e19fa95bb8ebc9a.ctex"
+uid="uid://b4e7bg1w6gd60"
+path="res://.godot/imported/alienBeige_round.png-1e2de5088cf941608806c65712860195.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/elementStone011.png"
-dest_files=["res://.godot/imported/elementStone011.png-fd14b0a5ce45f6120e19fa95bb8ebc9a.ctex"]
+source_file="res://project/ball/alienBeige_round.png"
+dest_files=["res://.godot/imported/alienBeige_round.png-1e2de5088cf941608806c65712860195.ctex"]
 
 [params]
 
