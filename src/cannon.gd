@@ -19,10 +19,6 @@ const _MAX_ANGLE :=deg_to_rad(0)
 var _current_ball : RigidBody2D = null
 
 
-func _ready() -> void:
-	_update_power_label()
-
-
 func _process(delta: float) -> void:
 	var power_axis := Input.get_axis("decrease_power", "increase_power")
 	if power_axis != 0:
@@ -48,7 +44,3 @@ func _process(delta: float) -> void:
 			if balls_left == 0:
 				no_remaining_projectiles.emit()
 			projectile_amount_changed.emit()
-
-
-func _update_power_label() -> void:
-	get_parent().get_node("PowerLabel").text = ("Power : %.d" % power)
